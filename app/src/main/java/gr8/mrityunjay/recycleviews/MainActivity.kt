@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         val fab: FloatingActionButton = fab
         fab.setOnClickListener {
             val wordListSize = mWordList.size
-            mWordList.addLast("New Word $wordListSize")
+            mWordList.addLast("New Word ${wordListSize+1}")
             mRecyclerView.adapter.notifyItemInserted(wordListSize)
             mRecyclerView.smoothScrollToPosition(wordListSize)
 
